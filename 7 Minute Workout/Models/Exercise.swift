@@ -5,7 +5,6 @@
 //  Created by Vito Borghi on 01/11/2023.
 //
 
-import CoreVideo
 import Foundation
 
 class Exercise {
@@ -14,13 +13,13 @@ class Exercise {
     }
     
     let name: String
-    let targetMuscle: Muscle
+    let targetMuscles: Set<Muscle>
     private let isLiked: Bool?
     //let showcase: Video?
     
-    init(name: String, targetMuscle: Muscle, isLiked: Bool?) {
+    init(name: String, targetMuscles: Set<Muscle>, isLiked: Bool?) {
         self.name = name
-        self.targetMuscle = targetMuscle
+        self.targetMuscles = targetMuscles
         self.isLiked = isLiked
     }
 }
