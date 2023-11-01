@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainMenu: View {
+    @State private var showSettingSheet = false
     var body: some View {
         NavigationStack{
             ZStack{
@@ -69,14 +70,18 @@ struct MainMenu: View {
             .ignoresSafeArea()
             .toolbar{
                 ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink {
-                        //
+                    Button {
+                        showSettingSheet.toggle()
                     } label: {
-                        Label("Settings", image: "gear")
+                        Image(systemName: "gearshape.fill")
+                            .resizable()
+                            .imageScale(.large)
                     }
-
                 }
             }
+            .sheet(isPresented: $showSettingSheet, content: {
+                SettingsView()
+            })
         }
     }
 }
