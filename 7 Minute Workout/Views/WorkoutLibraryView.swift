@@ -9,16 +9,43 @@ import SwiftUI
 
 struct WorkoutLibraryItem: View {
     var body: some View {
-        HStack{
-            ZStack {
-                Text("EASY")
-                    .font(.callout)
-                    .bold()
-                    .background(in: Circle())
+        NavigationLink {
+            //link to detail view
+        } label: {
+            HStack{
+                ZStack {
+                    Circle()
+                        .stroke(lineWidth: 2)
+                        .frame(width: 50, height: 50)
+                    Text("EASY")
+                        .font(.callout)
+                        .foregroundStyle(.black)
+                        .bold()
                 }
-            Text("BEGINNER ALTERNATE 7 MINUTES")
-                .fontDesign(.serif)
+                Text("BEGINNER ALTERNATE 7 MINUTES")
+                    .fontDesign(.serif)
+                    .foregroundStyle(.black)
+            }
         }
+    }
+}
+
+struct PresetsWorkoutLibrary: View {
+    var body: some View {
+        Section {
+            VStack{
+                WorkoutLibraryItem()
+                    .padding()
+                Divider()
+                    .padding()
+                WorkoutLibraryItem()
+            }
+        }    }
+}
+
+struct CustomWorkoutLibrary: View {
+    var body: some View {
+        ContentUnavailableView("No Custom workout present", image: "figure.run.circle", description: Text("Tap on the plus symbol to add your custom workout."))
     }
 }
 
@@ -36,15 +63,12 @@ struct WorkoutLibraryView: View {
                     }
                     .pickerStyle(.segmented)
                 }
+                if library == "Presets" {
+                    PresetsWorkoutLibrary()
+                } else { CustomWorkoutLibrary() }
                 
-                Section {
-                    VStack{
-                        WorkoutLibraryItem()
-                            .padding()
-                        WorkoutLibraryItem()
-                    }
-                }
                 Spacer()
+                
             }
         }
     }
