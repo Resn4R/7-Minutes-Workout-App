@@ -11,7 +11,7 @@ import SwiftUI
 struct __Minute_WorkoutApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainMenu()
         }
     }
 }
