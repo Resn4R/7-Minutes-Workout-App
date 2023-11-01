@@ -15,26 +15,68 @@ struct MainMenu: View {
                     .resizable()
                     .blur(radius: 2)
                 VStack(alignment: .center) {
-                    Text("Hello, ready to get better?")
+                    Text("Hello.\nReady to get better?")
                         .foregroundStyle(.white)
                         .font(.largeTitle)
                         .fontDesign(.serif)
                         .bold()
+                        .offset(y: -40)
+                        .padding(.vertical,30)
                     
-                    Button{
-                        //action
-                    } label: {
-                        Text("Workout Library")
-                            .font(.headline)
-                            .foregroundStyle(.black)
-                            .frame(width: 200, height: 100)
-                            .background(.accent)
-                            
+                    Section {
+                        NavigationLink(destination: WorkoutLibraryView()) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(width: 300, height: 100)
+                                HStack{
+                                    Image(systemName: "play.circle")
+                                    Text("Workout Library")
+                                        .font(.headline)
+                                }
+                                .foregroundStyle(.black)
+                            }
+                        }
+                        .padding()
+                        NavigationLink(destination: WorkoutLibraryView()) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(width: 300, height: 100)
+                                HStack{
+                                    Image(systemName: "play.circle")
+                                    Text("SMART Workout")
+                                        .font(.headline)
+                                }
+                                .foregroundStyle(.black)
+                            }
+                        }
+                        .padding()
+                        NavigationLink(destination: WorkoutLibraryView()) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 5)
+                                    .frame(width: 300, height: 100)
+                                HStack{
+                                    Image(systemName: "play.circle")
+                                    Text("7 Minutes Workout")
+                                        .font(.headline)
+                                }
+                                .foregroundStyle(.black)
+                            }
+                        }
+                        .padding()
                     }
-                    
                 }
             }
             .ignoresSafeArea()
+            .toolbar{
+                ToolbarItem(placement: .topBarLeading) {
+                    NavigationLink {
+                        //
+                    } label: {
+                        Label("Settings", image: "gear")
+                    }
+
+                }
+            }
         }
     }
 }
