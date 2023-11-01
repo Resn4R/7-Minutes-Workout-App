@@ -4,10 +4,11 @@
 //
 //  Created by Vito Borghi on 01/11/2023.
 //
-
+import SwiftData
 import HealthKit
 import Foundation
 
+@Model
 class User {
     let motivationLevels: Dictionary<Int, String> = [
         1:"I was told I need to make some changes",

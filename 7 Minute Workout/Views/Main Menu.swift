@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainMenu: View {
     @State private var showSettingSheet = false
+    
     var body: some View {
         NavigationStack{
             ZStack{
@@ -31,7 +32,7 @@ struct MainMenu: View {
                                     .frame(width: 300, height: 100)
                                 HStack{
                                     Image(systemName: "play.circle")
-                                    Text("Workout Library")
+                                    Text("7 Minutes Workout")
                                         .font(.headline)
                                 }
                                 .foregroundStyle(.black)
@@ -57,7 +58,7 @@ struct MainMenu: View {
                                     .frame(width: 300, height: 100)
                                 HStack{
                                     Image(systemName: "play.circle")
-                                    Text("7 Minutes Workout")
+                                    Text("Workout Library")
                                         .font(.headline)
                                 }
                                 .foregroundStyle(.black)

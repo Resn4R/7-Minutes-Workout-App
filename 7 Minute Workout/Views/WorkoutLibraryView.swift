@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+struct CreateCustomWorkout: View {
+    var body: some View {
+        NavigationLink {
+            //link to creation view
+        } label: {
+            HStack{
+                Image(systemName: "plus.circle")
+                Text("Create Custom Workout")
+                    .fontDesign(.serif)
+                    .foregroundStyle(.black)
+            }
+        }
+    }
+}
+
 struct WorkoutLibraryItem: View {
     var body: some View {
         NavigationLink {
@@ -45,7 +60,10 @@ struct PresetsWorkoutLibrary: View {
 
 struct CustomWorkoutLibrary: View {
     var body: some View {
-        ContentUnavailableView("No Custom workout present", image: "figure.run.circle", description: Text("Tap on the plus symbol to add your custom workout."))
+        VStack{
+            ContentUnavailableView("No Custom workouts present", image: "figure.run.circle", description: Text("Tap on the plus symbol to add your custom workout."))
+            CreateCustomWorkout()
+        }
     }
 }
 

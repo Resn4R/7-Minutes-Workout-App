@@ -4,9 +4,10 @@
 //
 //  Created by Vito Borghi on 01/11/2023.
 //
-
+import SwiftData
 import Foundation
 
+@Model
 class Exercise {
     enum Muscle {
         case biceps, triceps, shoulders, deltoids, upperBack, lowerBack, abs, pectorals, glutes, quadriceps, femoralTriceps, calfs
