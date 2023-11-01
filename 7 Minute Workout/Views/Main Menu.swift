@@ -65,6 +65,7 @@ struct MainMenu: View {
                         }
                         .padding()
                     }
+                        .fontWeight(.bold)
                 }
             }
             .ignoresSafeArea()

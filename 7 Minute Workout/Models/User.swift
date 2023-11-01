@@ -29,4 +29,12 @@ class User {
     let HealthKitConnected: Bool
     let motivation: Int
     let fitnessLevel: Int
+    
+    init(workoutReminder: Bool = false, inactivityReminder: Bool = false, HealthKitConnected: Bool = false, motivation: Int = 1, fitnessLevel: Int = 1) {
+        self.workoutReminder = workoutReminder
+        self.inactivityReminder = inactivityReminder
+        self.HealthKitConnected = HealthKitConnected
+        self.motivation = motivation
+        self.fitnessLevel = fitnessLevel
+    }
 }

@@ -7,9 +7,46 @@
 
 import SwiftUI
 
-struct WorkoutLibraryView: View {
+struct WorkoutLibraryItem: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            ZStack {
+                Text("EASY")
+                    .font(.callout)
+                    .bold()
+                    .background(in: Circle())
+                }
+            Text("BEGINNER ALTERNATE 7 MINUTES")
+                .fontDesign(.serif)
+        }
+    }
+}
+
+struct WorkoutLibraryView: View {
+    private let libraryTypes = ["Presets", "Custom"]
+    @State private var library = "Presets"
+    var body: some View {
+        NavigationStack{
+            VStack{
+                Section {
+                    Picker("", selection: $library) {
+                        ForEach(libraryTypes, id: \.self) { type in
+                            Text(type)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
+                Section {
+                    VStack{
+                        WorkoutLibraryItem()
+                            .padding()
+                        WorkoutLibraryItem()
+                    }
+                }
+                Spacer()
+            }
+        }
     }
 }
 
