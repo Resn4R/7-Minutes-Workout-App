@@ -4,7 +4,7 @@
 //
 //  Created by Vito Borghi on 01/11/2023.
 //
-
+import SwiftData
 import SwiftUI
 
 struct CreateCustomWorkout: View {
@@ -22,7 +22,8 @@ struct CreateCustomWorkout: View {
     }
 }
 
-struct WorkoutLibraryItem: View {
+struct PresetWorkoutItem: View {
+    let workout: Workout
     var body: some View {
         NavigationLink {
             //link to detail view
@@ -32,12 +33,12 @@ struct WorkoutLibraryItem: View {
                     Circle()
                         .stroke(lineWidth: 2)
                         .frame(width: 50, height: 50)
-                    Text("EASY")
+                    Text(workout.intensityDictionary[workout.intensity] ?? "?")
                         .font(.callout)
                         .foregroundStyle(.black)
                         .bold()
                 }
-                Text("BEGINNER ALTERNATE 7 MINUTES")
+                Text(workout.name ?? "Unnamed Workout")
                     .fontDesign(.serif)
                     .foregroundStyle(.black)
             }
@@ -46,16 +47,19 @@ struct WorkoutLibraryItem: View {
 }
 
 struct PresetsWorkoutLibrary: View {
+    var workoutLibrary: [Workout]
     var body: some View {
         Section {
-            VStack{
-                WorkoutLibraryItem()
-                    .padding()
-                Divider()
-                    .padding()
-                WorkoutLibraryItem()
+            ForEach(workoutLibrary) {workout in
+                VStack{
+                    PresetWorkoutItem(workout: workout)
+                        .padding()
+                    Divider()
+                        .padding()
+                }
             }
-        }    }
+        }
+    }
 }
 
 struct CustomWorkoutLibrary: View {
@@ -68,8 +72,21 @@ struct CustomWorkoutLibrary: View {
 }
 
 struct WorkoutLibraryView: View {
+    private func loadWorkouts () {
+        let fetchDescriptor = FetchDescriptor<Workout>(sortBy: [SortDescriptor(\Workout.intensity)])
+           
+           do {
+                workoutLibrary = try modelContext.fetch(fetchDescriptor)
+           } catch {
+               print("Error initialising model context: \(error.localizedDescription)")
+           }
+    }
+
+    @Environment(\.modelContext) var modelContext
     private let libraryTypes = ["Presets", "Custom"]
     @State private var library = "Presets"
+    @State private var workoutLibrary = [Workout]()
+    
     var body: some View {
         NavigationStack{
             VStack{
@@ -82,13 +99,14 @@ struct WorkoutLibraryView: View {
                     .pickerStyle(.segmented)
                 }
                 if library == "Presets" {
-                    PresetsWorkoutLibrary()
+                    PresetsWorkoutLibrary(workoutLibrary: workoutLibrary)
                 } else { CustomWorkoutLibrary() }
                 
                 Spacer()
                 
             }
         }
+        .onAppear(perform: loadWorkouts)
     }
 }
 

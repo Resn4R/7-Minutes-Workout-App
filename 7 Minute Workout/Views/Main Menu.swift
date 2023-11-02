@@ -15,9 +15,12 @@ struct MainMenu: View {
             ZStack{
                 Image(.mainMenuBackground)
                     .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: .infinity, height: .infinity) // Set the initial size of the image
+                    .scaleEffect(2.0)
                     .blur(radius: 2)
-                VStack(alignment: .center) {
-                    Text("Hello.\nReady to get better?")
+                VStack {
+                    Text("Ready to get better?")
                         .foregroundStyle(.white)
                         .font(.largeTitle)
                         .fontDesign(.serif)
@@ -38,7 +41,9 @@ struct MainMenu: View {
                                 .foregroundStyle(.black)
                             }
                         }
+                        .offset(y: 7)
                         .padding()
+                        
                         NavigationLink(destination: WorkoutLibraryView()) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
@@ -51,7 +56,9 @@ struct MainMenu: View {
                                 .foregroundStyle(.black)
                             }
                         }
+                        
                         .padding()
+                        
                         NavigationLink(destination: WorkoutLibraryView()) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
