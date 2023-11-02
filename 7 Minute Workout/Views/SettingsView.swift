@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismissView
+    
     @State private var user = User()
     
     @State private var healthKitConnected = false
@@ -83,7 +85,13 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
-            
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Done") {
+                        dismissView()
+                    }
+                }
+            }
         }
     }
 }

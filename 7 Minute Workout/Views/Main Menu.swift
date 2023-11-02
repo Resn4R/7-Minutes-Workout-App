@@ -44,7 +44,7 @@ struct MainMenu: View {
                         .offset(y: 7)
                         .padding()
                         
-                        NavigationLink(destination: WorkoutLibraryView()) {
+                        NavigationLink(destination: WorkoutView()) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
                                     .frame(width: 300, height: 100)
@@ -59,7 +59,7 @@ struct MainMenu: View {
                         
                         .padding()
                         
-                        NavigationLink(destination: WorkoutLibraryView()) {
+                        NavigationLink(destination: WorkoutView()) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 5)
                                     .frame(width: 300, height: 100)
@@ -88,9 +88,9 @@ struct MainMenu: View {
                     }
                 }
             }
-            .sheet(isPresented: $showSettingSheet, content: {
+            .sheet(isPresented: $showSettingSheet) {
                 SettingsView()
-            })
+            }
         }
     }
 }
