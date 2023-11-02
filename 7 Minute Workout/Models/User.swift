@@ -5,7 +5,6 @@
 //  Created by Vito Borghi on 01/11/2023.
 //
 import SwiftData
-import HealthKit
 import Foundation
 
 @Model
@@ -25,16 +24,21 @@ class User {
 
     ]
     
-    let workoutReminder: Bool
-    let inactivityReminder: Bool
-    let HealthKitConnected: Bool
-    let motivation: Int
-    let fitnessLevel: Int
+    var workoutReminder: Bool
+    var inactivityReminder: Bool
+    var healthKitConnected: Bool
+    var formAudioPrompt: Bool
+    var motivationalAudioPrompt: Bool
     
-    init(workoutReminder: Bool = false, inactivityReminder: Bool = false, HealthKitConnected: Bool = false, motivation: Int = 1, fitnessLevel: Int = 1) {
+    var motivation: Int
+    var fitnessLevel: Int
+    
+    init(workoutReminder: Bool = false, inactivityReminder: Bool = false, healthKitConnected: Bool = false, formAudioPrompt: Bool = false, motivationalAudioPrompt: Bool = false, motivation: Int = 1, fitnessLevel: Int = 1) {
         self.workoutReminder = workoutReminder
         self.inactivityReminder = inactivityReminder
-        self.HealthKitConnected = HealthKitConnected
+        self.healthKitConnected = healthKitConnected
+        self.formAudioPrompt = formAudioPrompt
+        self.motivationalAudioPrompt = motivationalAudioPrompt
         self.motivation = motivation
         self.fitnessLevel = fitnessLevel
     }
