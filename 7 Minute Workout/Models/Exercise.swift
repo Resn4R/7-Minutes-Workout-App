@@ -7,12 +7,12 @@
 import SwiftData
 import Foundation
 
+enum Muscle: Codable {
+    case biceps, triceps, shoulders, deltoids, upperBack, lowerBack, abs, pectorals, glutes, quadriceps, femoralTriceps, calfs
+}
+
 @Model
 class Exercise {
-    enum Muscle {
-        case biceps, triceps, shoulders, deltoids, upperBack, lowerBack, abs, pectorals, glutes, quadriceps, femoralTriceps, calfs
-    }
-    
     let name: String
     let targetMuscles: Set<Muscle>
     private let isLiked: Bool?

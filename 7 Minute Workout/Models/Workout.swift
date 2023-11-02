@@ -7,11 +7,12 @@
 import SwiftData
 import Foundation
 
+enum Intensity: Codable {
+    case relaxed, veryEasy, easy, moderate, hard, veryHard, extreme
+}
+
 @Model
 class Workout {
-    enum Intensity {
-        case relaxed, veryEasy, easy, moderate, hard, veryHard, extreme
-    }
     
     let name: String?
     let exercises: [Exercise]
