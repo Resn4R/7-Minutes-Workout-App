@@ -1,0 +1,222 @@
+[
+    {
+        "name": "Push-Up",
+        "targetMuscles": ["pectorals", "triceps", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Squat",
+        "targetMuscles": ["quadriceps", "glutes", "hamstrings"],
+        "isLiked": null
+    },
+    {
+        "name": "Plank",
+        "targetMuscles": ["abs", "lowerBack"],
+        "isLiked": null
+    },
+    {
+        "name": "Lunges",
+        "targetMuscles": ["quadriceps", "glutes", "hamstrings"],
+        "isLiked": null
+    },
+    {
+        "name": "Burpees",
+        "targetMuscles": ["fullBody"],
+        "isLiked": null
+    },
+    {
+        "name": "Mountain Climbers",
+        "targetMuscles": ["abs", "pectorals", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Pull-Up",
+        "targetMuscles": ["biceps", "upperBack"],
+        "isLiked": null
+    },
+    {
+        "name": "Leg Raises",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Dips",
+        "targetMuscles": ["triceps", "pectorals"],
+        "isLiked": null
+    },
+    {
+        "name": "Wall Sit",
+        "targetMuscles": ["quadriceps", "glutes"],
+        "isLiked": null
+    },
+    {
+        "name": "Bicycle Crunches",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Box Jumps",
+        "targetMuscles": ["quadriceps", "glutes", "calves"],
+        "isLiked": null
+    },
+    {
+        "name": "Superman",
+        "targetMuscles": ["lowerBack"],
+        "isLiked": null
+    },
+    {
+        "name": "Russian Twists",
+        "targetMuscles": ["abs", "obliques"],
+        "isLiked": null
+    },
+    {
+        "name": "Handstand Push-Up",
+        "targetMuscles": ["shoulders", "triceps"],
+        "isLiked": null
+    },
+    {
+        "name": "Hollow Body Hold",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Jumping Jacks",
+        "targetMuscles": ["fullBody"],
+        "isLiked": null
+    },
+    {
+        "name": "Calf Raises",
+        "targetMuscles": ["calves"],
+        "isLiked": null
+    },
+    {
+        "name": "Inverted Row",
+        "targetMuscles": ["upperBack", "biceps"],
+        "isLiked": null
+    },
+    {
+        "name": "Spiderman Push-Up",
+        "targetMuscles": ["pectorals", "triceps", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Side Plank",
+        "targetMuscles": ["abs", "obliques"],
+        "isLiked": null
+    },
+    {
+        "name": "Diamond Push-Up",
+        "targetMuscles": ["triceps", "pectorals"],
+        "isLiked": null
+    },
+    {
+        "name": "Bodyweight Squats",
+        "targetMuscles": ["quadriceps", "glutes"],
+        "isLiked": null
+    },
+    {
+        "name": "Sit-Ups",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Box Push-Up",
+        "targetMuscles": ["pectorals", "triceps", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Reverse Lunges",
+        "targetMuscles": ["quadriceps", "glutes", "hamstrings"],
+        "isLiked": null
+    },
+    {
+        "name": "Jump Squats",
+        "targetMuscles": ["quadriceps", "glutes", "calves"],
+        "isLiked": null
+    },
+    {
+        "name": "Leg Lifts",
+        "targetMuscles": ["abs", "lowerBack"],
+        "isLiked": null
+    },
+    {
+        "name": "Tricep Dips",
+        "targetMuscles": ["triceps", "pectorals"],
+        "isLiked": null
+    },
+    {
+        "name": "Wall Sit",
+        "targetMuscles": ["quadriceps", "glutes"],
+        "isLiked": null
+    },
+    {
+        "name": "Russian Twists",
+        "targetMuscles": ["abs", "obliques"],
+        "isLiked": null
+    },
+    {
+        "name": "Handstand Push-Up",
+        "targetMuscles": ["shoulders", "triceps"],
+        "isLiked": null
+    },
+    {
+        "name": "Hollow Body Hold",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Jumping Jacks",
+        "targetMuscles": ["fullBody"],
+        "isLiked": null
+    },
+    {
+        "name": "Calf Raises",
+        "targetMuscles": ["calves"],
+        "isLiked": null
+    },
+    {
+        "name": "Inverted Row",
+        "targetMuscles": ["upperBack", "biceps"],
+        "isLiked": null
+    },
+    {
+        "name": "Spiderman Push-Up",
+        "targetMuscles": ["pectorals", "triceps", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Side Plank",
+        "targetMuscles": ["abs", "obliques"],
+        "isLiked": null
+    },
+    {
+        "name": "Diamond Push-Up",
+        "targetMuscles": ["triceps", "pectorals"],
+        "isLiked": null
+    },
+    {
+        "name": "Bodyweight Squats",
+        "targetMuscles": ["quadriceps", "glutes"],
+        "isLiked": null
+    },
+    {
+        "name": "Sit-Ups",
+        "targetMuscles": ["abs"],
+        "isLiked": null
+    },
+    {
+        "name": "Box Push-Up",
+        "targetMuscles": ["pectorals", "triceps", "deltoids"],
+        "isLiked": null
+    },
+    {
+        "name": "Reverse Lunges",
+        "targetMuscles": ["quadriceps", "glutes", "hamstrings"],
+        "isLiked": null
+    },
+    {
+        "name": "Jump Squats",
+        "targetMuscles": ["quadriceps", "glutes", "calves"],
+        "isLiked": null
+    }
+]
